@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/wealsegun/natours/issues"
   },
-  "homepage": "https://github.com/wealsegun/natours#readme"
+  "homepage": "https://github.com/wealsegun/natours#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
 }
