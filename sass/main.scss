@@ -1,4 +1,9 @@
-*,
+
+$color-primary: #55c57a;
+$color-primary-light:#7ed56f;
+$color-primary-dark:#28b485;
+
+*, 
 *::after,
 *::before {
     margin: 0;
@@ -17,12 +22,18 @@ body {
     line-height: 1.7;
     color: #777;
     padding: 3rem;
+
     box-sizing: border-box;
 }
 
+
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+    background-image:linear-gradient(
+        to right bottom,
+         rgba($color-primary-light, 0.8),
+         rgba($color-primary-dark, 0.8)),
+         url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
@@ -30,11 +41,11 @@ body {
 }
 
 .header__logo-box {
+
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
-
 .header__logo {
     height: 3.5rem;
     /* width: 6vw; */
@@ -47,7 +58,7 @@ body {
 }
 
 .header__text-box {
-    position: absolute;
+    position:absolute;
     top: 40%;
     bottom: 50%;
     left: 50%;
@@ -55,12 +66,15 @@ body {
     text-align: center;
 }
 
+
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+
     /* This is used to set the shakking animation problems */
     backface-visibility: hidden;
     margin-bottom: 6rem;
+
 }
 
 .heading-primary--main {
@@ -68,28 +82,38 @@ body {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
+
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+    
     /* animation-iteration-count: 3; */
     /* animation-delay: 3s; */
+
 }
 
 /* .heading-primary-main:focus {
     animation: moveInLeft 1s ease-out;
 } */
+
 .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
+
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
     /* animation: moveInRight 1s ease-out; */
-    /* animation-iteration-count: 3; */
+
+     /* animation-iteration-count: 3; */
     /* animation-delay: 3s; */
+
 }
+
+
 
 @keyframes moveInLeft {
     0% {
@@ -100,13 +124,16 @@ body {
     /* 60% {
         transform: translateX(-100px) rotate(180deg);
     } */
+
     80% {
+
         transform: translateX(1rem);
     }
 
     100% {
         opacity: 1;
         transform: translate(0);
+
     }
 }
 
@@ -115,16 +142,17 @@ body {
         opacity: 0;
         transform: translateX(10rem);
     }
-
     80% {
+
         transform: translateX(-1rem);
     }
-
     100% {
         opacity: 1;
         transform: translate(0);
+
     }
 }
+
 
 @keyframes moveInBotton {
     0% {
@@ -135,14 +163,15 @@ body {
     100% {
         opacity: 1;
         transform: translate(0);
+
     }
 }
 
 .btn:link,
-.btn:visited {
+.btn:visited  {
     text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
+    text-decoration: none;   
+    padding: 1.5rem 4rem; 
     display: inline-block;
     border-radius: 10rem;
     transition: all .2s;
@@ -151,17 +180,18 @@ body {
 
 .btn:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
 }
 
 .btn:active {
     transform: translateY(1px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
 }
 
-.btn--white {
+.btn--white  {
     background-color: #fff;
-    color: #777;
+    color: #777;   
+    
 }
 
 .btn::after {
@@ -183,7 +213,7 @@ body {
     background-color: #fff;
 }
 
-.btn:hover::after {
+.btn:hover::after{
     transform: scale(1.4) scale(1.6);
     opacity: 0;
 }
@@ -191,4 +221,6 @@ body {
 .btn--animated {
     animation: moveInBotton .5s ease-out .75s;
     animation-fill-mode: backwards;
+    
+    
 }
